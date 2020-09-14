@@ -89,15 +89,12 @@ void InToPref(string s)
 int main() 
 { 
   
-   string exp= "a+b*(c^d-e)^(f+g*h)-i";
+   string exp= "(A+B*(C+D/E)^F*G)";
+   cout<<"reverse of given expression is:"<<endl;
    reverse(exp);
 
-    cout<<"\n The prefix of given expression is:";
+    cout<<"\n The postfix of given expression is:";
      InToPref(exp);
         cout<<endl;
-    
-   
- 
-
     return 0; 
 } 

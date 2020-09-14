@@ -63,7 +63,7 @@ void InToPost(string s)
   
 int main() 
 { 
-    string exp = "a+b*(c^d-e)^(f+g*h)-i"; 
+    string exp = "a+b/c*d-b/e*a^b"; 
     InToPost(exp); 
     return 0; 
 } 
