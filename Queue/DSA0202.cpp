@@ -33,7 +33,7 @@ struct queue{
         }
     }
     int dequeue(){
-        if(front==-1){
+        if(front==-1&& rear == -1){
             cout<<"queue is empty"<<endl;
         }
         int data = que[front]; 
@@ -51,24 +51,32 @@ struct queue{
     return data; 
     }
     void display(){
-        if(front==-1){
+        if(front==-1&& rear == -1){
             cout<<"\n empty queue"<<endl;
             return;
         }
         cout<<"The queue is:"<<endl;
-        if(rear>=front)
+        // if(rear>=front)
+        // {
+        //     for(int i=front;i<N;i++){
+        //         cout<<que[i]<<endl;;
+        //     }
+        // }
+        // else{
+        //     for(int i=front;i<N;i++){cout<<que[i]<<endl;}
+        //     for(int i=0;i<=rear;i++){cout<<que[i]<<endl;}
+        //
+        //     }
+    	    int i= front;
+	    while (i != rear )
         {
-            for(int i=front;i<N;i++){
-                cout<<que[i]<<endl;;
-            }
+            cout << que[i] << " ";
+            i = (i+1) % N;
         }
-        else{
-            for(int i=front;i<N;i++){cout<<que[i]<<endl;}
-            for(int i=0;i<=rear;i++){cout<<que[i]<<endl;}
-            }
-        }
+        cout << que[rear] << "\n\n";
     
-};
+    }
+    };
 int main(){
     queue mq(7);
     mq.enqueue(2);
@@ -80,6 +88,7 @@ int main(){
     mq.dequeue();
     mq.dequeue();
     mq.display();
+    cout<<"After further insertion"<<endl;
     mq.enqueue(20);
     mq.enqueue(40);
     mq.display();
