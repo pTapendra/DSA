@@ -17,7 +17,7 @@ struct queue{
             cout<<"The queue is full";
             return;
         }
-        else if(front==1)
+        else if(front==-1)
         {
             front=rear=0;
             que[rear]=data;
@@ -55,7 +55,7 @@ struct queue{
             cout<<"\n empty queue"<<endl;
             return;
         }
-        cout<<"The queue is:"<<" ";
+        cout<<"The queue is:"<<endl;
         if(rear>=front)
         {
             for(int i=front;i<N;i++){
@@ -83,7 +83,7 @@ int main(){
     mq.enqueue(20);
     mq.enqueue(40);
     mq.display();
-    mq.enqueue(60);
+
 
     return 0;
 
