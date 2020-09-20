@@ -60,7 +60,7 @@ void Deque::enqueuefront(int xf){
         cout<<"queue is full";
     else if(front == -1 && rear== -1){
         front=rear=0;
-        A[front] = xf; //because we are inserting from front
+        A[front] = xf; 
     }
     else if(front == 0)
     {
@@ -78,7 +78,7 @@ void Deque::enqueuerear(int xr){
         cout<<"queue is full";
     else if(front == -1 && rear== -1){
         front=rear=0;
-        A[rear] = xr; //because we are inserting from rear
+        A[rear] = xr; 
     }
     else if(rear == MAX -1){
         rear = 0;
@@ -128,7 +128,7 @@ void Deque::print(){
         cout<<A[i]<<" ";
         i = (i+1)%MAX;
     }
-    cout<<A[rear]<<endl; //to print rear value because in while loop 2==2
+    cout<<A[rear]<<endl; 
 }
 
 
@@ -137,12 +137,10 @@ int main(){
     D.enqueuefront(2);
     D.enqueuefront(5); 
     D.print();
-    D.enqueuerear(-1); //1st index
+    D.enqueuerear(-1); 
     D.print();
-    D.enqueuerear(0); //2nd index
-    D.enqueuefront(7); //3rd index because front-- i.e. 4-1 = 3
-    D.print(); //final postion front = 3 rear =2 //displays in order 7 5 2 -1 0
-    cout<<endl;
+    D.enqueuerear(0); 
+    D.enqueuefront(7); 
     cout<<" -------------"<<endl;
     D.dequeuefront();
     D.dequeuerear();

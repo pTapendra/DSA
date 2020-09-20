@@ -1,16 +1,18 @@
 //2.	Perform enqueue and dequeue operations in Circular Queue
 #include<iostream>
 using namespace std;
-struct queue{
+class queue{
     int rear,front;
     int N;
     int *que;
+     public:
     queue(int i)
     {
         front=rear=-1;
         N=i;
         que=new int[i];
     }
+   
     void enqueue(int data){
         if ((front==0&&rear==N-1)|| (rear==(front-1)%(N-1)))
         {
@@ -56,17 +58,6 @@ struct queue{
             return;
         }
         cout<<"The queue is:"<<endl;
-        // if(rear>=front)
-        // {
-        //     for(int i=front;i<N;i++){
-        //         cout<<que[i]<<endl;;
-        //     }
-        // }
-        // else{
-        //     for(int i=front;i<N;i++){cout<<que[i]<<endl;}
-        //     for(int i=0;i<=rear;i++){cout<<que[i]<<endl;}
-        //
-        //     }
     	    int i= front;
 	    while (i != rear )
         {

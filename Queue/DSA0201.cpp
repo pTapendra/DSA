@@ -11,7 +11,7 @@ int queue[N];
 }
  
 bool isfull() {
-   if(rear == N - 1)
+   if(rear == N-1)
       return true;
    else
       return false;
