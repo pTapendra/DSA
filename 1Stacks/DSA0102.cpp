@@ -50,20 +50,24 @@ void InToPost(string s)
         } 
   
     } 
+    cout<<"\nThe postfix expression: "<<newst<<endl;
     while(str.top() != '#') 
     { 
         char c = str.top(); 
         str.pop(); 
         newst += c; 
     } 
-      
+    cout<<"\nAfter popping the remaining elements in stack:"<<endl;
+    cout<<"Required Output:"<<endl; 
     cout << newst << endl; 
   
 } 
   
 int main() 
 { 
-    string exp = "a+b/c*d-b/e*a^b"; 
+    string exp;
+    cout<<"Enter ypur infix expression:"<<endl;
+    cin>>exp; 
     InToPost(exp); 
     return 0; 
 } 

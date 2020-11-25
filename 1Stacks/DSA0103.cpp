@@ -75,10 +75,11 @@ void InToPref(string s)
         char c = str.top(); 
         str.pop(); 
         newst += c; 
+
     } 
      s=newst;
      cout<<s<<endl;
- cout<<"The required prefix is:"<<endl;
+     cout<<"The required prefix is:"<<endl;
       reverse(s);
   
 } 
@@ -88,13 +89,13 @@ void InToPref(string s)
 
 int main() 
 { 
-  
-   string exp= "(A+B*(C+D/E)^F*G)";
-   cout<<"reverse of given expression is:"<<endl;
-   reverse(exp);
+    string exp;
+    exp="((A+B)*C-(D-E))$(F+G)";
+    cout<<"reverse of given expression is:"<<endl;
+    reverse(exp);
 
-    cout<<"\n The postfix of given expression is:";
-     InToPref(exp);
-        cout<<endl;
+    cout<<"\n The postfix of reversed expression is:";
+    InToPref(exp);
+    cout<<endl;
     return 0; 
 } 

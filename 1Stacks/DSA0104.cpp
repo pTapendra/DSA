@@ -46,7 +46,7 @@ int EvaluatePostfix(string expression)
 }
 bool IsNumericDigit(char C) 
 {
-	if(C >= '0' && C <= '9') return true;
+	if(C >= '1' && C <= '9') return true;
 	return false;
 }
 bool IsOperator(char C)
